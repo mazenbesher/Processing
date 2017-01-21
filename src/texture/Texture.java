@@ -74,7 +74,7 @@ public class Texture extends ExtendedPApplet {
     }
 
     private void dTex(int x, int y) {
-        int height = 200;
+        int height = 200; // magic number
         int margin = textSize / 2;
         text(x, y - margin, "d)");
 
@@ -88,6 +88,9 @@ public class Texture extends ExtendedPApplet {
         vertex(x + 200, y, 1 ,1);
         endShape(CLOSE);
 
+        stroke(black);
+        strokeWeight(1);
+        line(x, y, x + 300, y + height);
     }
 
     private void cTex(int x, int y) {
