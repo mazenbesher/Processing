@@ -8,16 +8,20 @@ import java.awt.*;
 
 import static java.awt.Color.black;
 import static java.awt.Color.white;
-import static java.awt.Color.pink;
+import static java.awt.Color.red;
 
 public class Texture extends ExtendedPApplet {
     private PImage tex;
     private int textSize = 12;
-    private Color bgColor = new Color(18, 127, 226);
+
+    // colors
+    private Color textColor = black;
+    private Color bgColor = white;
+    private Color strockColor = red;
 
     @Override
     protected int getHeight() {
-        return 600;
+        return 650;
     }
 
     @Override
@@ -43,7 +47,11 @@ public class Texture extends ExtendedPApplet {
     }
 
     public void draw() {
+        clear();
+        background(bgColor);
+
         int margin = textSize * 2;
+        interactiveWrap();
         originalTex(20, 20);
         aTex(20 + 100 + margin, 20);
         bTex(20 + 100 + margin + 100 + margin, 20);
@@ -51,11 +59,27 @@ public class Texture extends ExtendedPApplet {
         dTex(20 + 100 + margin, 20 + 100 + margin + 200 + margin);
     }
 
+    private void interactiveWrap() {
+        int margin = 10;
+        int x = margin;
+        int y = getHeight() - textSize - margin;
+
+        if(mousePressed){
+            textureWrap(CLAMP);
+            text(x, y, "Wrap: Clamp");
+        } else {
+            textureWrap(REPEAT);
+            text(x, y, "Wrap: Repeat");
+        }
+    }
+
     private void dTex(int x, int y) {
         int height = 200;
         int margin = textSize / 2;
         text(x, y - margin, "d)");
 
+        stroke(red);
+        strokeWeight(1);
         beginShape();
         texture(tex);
         vertex(x, y, 0, 1);
@@ -71,6 +95,8 @@ public class Texture extends ExtendedPApplet {
         int margin = textSize / 2;
         text(x, y - margin, "c)");
 
+        stroke(red);
+        strokeWeight(1);
         beginShape();
         texture(tex);
         vertex(x, y, 3, 0);
@@ -86,6 +112,8 @@ public class Texture extends ExtendedPApplet {
         int margin = textSize / 2;
         text(x, y - margin, "b)");
 
+        stroke(red);
+        strokeWeight(1);
         beginShape();
         texture(tex);
         vertex(x, y, 0, 1);
@@ -100,6 +128,8 @@ public class Texture extends ExtendedPApplet {
         int margin = textSize / 2;
         text(x, y - margin, "a)");
 
+        stroke(red);
+        strokeWeight(1);
         beginShape();
         texture(tex);
         vertex(x, y, 0, 0.5f);
@@ -114,6 +144,8 @@ public class Texture extends ExtendedPApplet {
         int margin = textSize / 2;
         text(x, y - margin, "Original Texture");
 
+        stroke(red);
+        strokeWeight(1);
         beginShape();
         texture(tex);
         vertex(x, y, 0, 1);
@@ -125,8 +157,9 @@ public class Texture extends ExtendedPApplet {
 
     private void text(int x, int y, String text) {
         textSize(textSize);
-        fill(white);
+        fill(textColor);
         noStroke();
         text(text, x, y);
+        fill(bgColor);
     }
 }
