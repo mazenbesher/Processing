@@ -1,6 +1,5 @@
 package interpolation;
 
-import helpers.Line;
 import helpers.MidCoord;
 import helpers.ExtendedPApplet;
 import helpers.PolarLine;
