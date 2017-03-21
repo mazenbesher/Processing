@@ -4,3 +4,6 @@
 
 # Texture
 ![demo texture](https://github.com/mazenbesher/Processing/blob/master/media/demo_texture.gif)
+
+# Sphere
+![demo sphere](https://github.com/mazenbesher/Processing/blob/master/media/demo_sphere.gif)
