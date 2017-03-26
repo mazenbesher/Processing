@@ -7,3 +7,7 @@
 
 # Sphere
 ![demo sphere](https://github.com/mazenbesher/Processing/blob/master/media/demo_sphere.gif)
+
+# Splines
+## Subdivision (smoothed line)
+![demo subdivision](https://github.com/mazenbesher/Processing/blob/master/media/demo_subdivision.gif)
