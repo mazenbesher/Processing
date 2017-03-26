@@ -35,7 +35,7 @@ public abstract class ExtendedPApplet extends PApplet {
 
 
     /**
-     * allow java.awt.Color as paramter
+     * allow java.awt.Color as parameter
      */
     public void stroke(Color color) {
         super.stroke(color.getRGB());
