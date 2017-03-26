@@ -54,13 +54,15 @@ public class Sphere extends ExtendedPApplet {
         // draw sphere
 //        drawSphere(getWidth() / 2, getHeight() / 2, 0, numPoints, r);
         drawSphere(mouseX, mouseY, 0, numPoints, r);
+    }
 
-        // change sphere color
-        if (mousePressed)
-            stroke(new Color(
-                    Math.round(random(0, 255)),
-                    Math.round(random(0, 255)),
-                    Math.round(random(0, 255))).getRGB());
+    // change sphere color
+    @Override
+    public void mouseClicked() {
+        stroke(new Color(
+                Math.round(random(0, 255)),
+                Math.round(random(0, 255)),
+                Math.round(random(0, 255))).getRGB());
     }
 
     @Override
