@@ -11,3 +11,6 @@
 # Splines
 ## Subdivision (smoothed line)
 ![demo subdivision](https://github.com/mazenbesher/Processing/blob/master/media/demo_subdivision.gif)
+
+## Bézier-Curve
+![demo bezier](https://github.com/mazenbesher/Processing/blob/master/media/demo_bezier.gif)
