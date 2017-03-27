@@ -78,21 +78,11 @@ public class Subdivision extends ExtendedPApplet {
     @Override
     public void keyPressed(KeyEvent event) {
         switch (event.getKeyCode()) {
-//            case 38: // UP
-//                r += rIncrease;
-//                System.out.println("radius: " + r);
-//                break;
-//            case 40: // DOWN
-//                if (r >= rIncrease)
-//                    r -= rIncrease;
-//                System.out.println("radius: " + r);
-//                break;
-
-            case 37: // LEFT
+            case LEFT: // LEFT
                 maxRec--;
                 System.out.println("maxRec: " + maxRec);
                 break;
-            case 39: // RIGHT
+            case RIGHT: // RIGHT
                 maxRec++;
                 System.out.println("maxRec: " + maxRec);
                 break;
